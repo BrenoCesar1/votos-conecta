@@ -1,0 +1,229 @@
+
+.button, .button_cadPauta, .button_cadFinal, .button_cadVoto {
+  display: inline-block;
+  padding: 12px 28px;
+  margin: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  background-image: linear-gradient(to bottom right, #f3b841, #EB9B00);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px rgb(231, 236, 236);
+  transition: all 0.2s ease-in-out;
+  transform: translate(65%);
+}
+.botoes{
+  display: flex;
+}
+
+.botoes a {
+  margin-right: 5%;
+  margin-left: 10%;
+  margin-top: 15px;
+}
+
+.button_cadFinal{
+  margin: 30px;
+  transform: translate(-15%);
+}
+
+.button_cadPauta {
+  transform: translate(25%);
+}
+
+.button_cadVoto{
+  transform: translate(85%);
+}
+
+.button:hover, .button_cadPauta:hover, .button_cadFinal:hover, .button_cadVoto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 0px #ca8700;
+  transform: translate(60%);
+}
+
+.button_cadPauta:hover {
+  transform: translate(20%);
+}
+
+.button_cadFinal:hover{
+  transform: translate(-10%);
+}
+
+.button_cadVoto:hover{
+  transform: translate(80%);
+}
+
+.button:active, .button_cadPauta:active, .button_cadFinal:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #EB9B00, #f3b841);
+
+}
+
+
+.button:before, .button_cadPauta:before, .button_cadFinal:before,
+
+.button:after, .button_cadPauta:after, .button_cadFinal:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+
+}
+
+
+.button:before, .button_cadPauta:before, .button_cadFinal:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+
+}
+
+
+.button:after, .button:after, .button_cadFinal:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+.btn-conteiner {
+  display: flex;
+  --color-text: #ffffff;
+  --color-background: #EB9B00;
+  --color-outline: #a5720b;
+  --color-shadow: #00000080;
+ margin-top: 10px;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover, .btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+/* Telas menores configuração */
+@media screen and (max-width: 768px) {
+  .button_cadFinal{
+    margin: 10%;
+    transform: translate(-70%);
+  }
+
+  #botaoSessao{
+    margin: 10%;
+    transform: translate(-30%);
+    width: auto;
+  }
+
+  .button:active, .button_cadPauta:active {
+    transform: translate(33%);
+  }
+
+  .button_cadFinal:active{
+    transform: translate(-78%);
+  }
+  .button_cadFinal:hover{
+    transform: translate(-80%);
+  }
+  .btn-conteiner{
+    transform: translateX(50px)scale(0.7);
+  }
+
+}
+

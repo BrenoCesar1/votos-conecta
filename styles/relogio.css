@@ -1,0 +1,48 @@
+
+#relogio {
+
+  font-size: 1.5rem; /* Reduzindo o tamanho da fonte */
+  font-family: 'Arial', sans-serif;
+  color: #fffafa;
+  background-color: #002F52;
+  padding: 2px 10px; /* Reduzindo o padding */
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 120px; /* Reduzindo a largura */
+  margin: 0 auto;
+  transform: translateX(225px)translateY(-25px);
+}
+
+
+/* Estilo do texto "tempo encerrado" */
+
+#contador {
+
+  font-size: 1.8rem; /* Reduzindo o tamanho da fonte */
+  font-family: 'Arial', sans-serif;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+
+/* Efeito para simular que o cronômetro está pulsando */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* Aplicando o efeito no cronômetro */
+#relogio.pulsing {
+  animation: pulse 1s infinite;
+}

@@ -1,0 +1,22 @@
+
+.cardVotos {
+width: 130px;
+height: 35px;
+margin: 0 auto;
+background: var(--azul-degrade);
+border-radius: 8px;
+z-index: 1;
+transform: translate(10%);
+}
+
+#qtdeSim, #qtdeNao{
+    color: aliceblue;
+    transform: translate(6%) translateY(10%);
+}
+
+#separa_card{
+    display: flex;
+    transform: translate(-15%);
+    margin-top: 30px;
+    transform: translate(-5%);
+}

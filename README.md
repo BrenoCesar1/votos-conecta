@@ -1,2 +1,2 @@
-# votos-conecta
-Projeto front-end para api-votos-cooperativa
+# Front-api-votos-cooperativa
+Projeto front end para aprender a linguagem Java Script

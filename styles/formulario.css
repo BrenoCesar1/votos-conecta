@@ -1,0 +1,338 @@
+
+.principal, .principalSessaoAberta, .principal__formularioVoto {
+    width: 90vw; /* Reduz a largura do formulário em telas menores */
+    max-width: 600px; /* Define uma largura máxima para evitar que o formulário fique muito grande em telas grandes */
+    margin: 0 auto; /* Simplifica o posicionamento vertical */
+    padding: 2em;
+}
+
+.principal__formularioVoto{
+    transform: translateX(-40%) translateY(-90%);
+    width: 300px;
+}
+
+/* Adicione uma Media Query para telas menores */
+@media screen and (max-width: 768px) {
+    .principal, .principalSessaoAberta {
+      width: 90%; /* Em telas menores, a largura será de 90% da largura da tela */
+      transform: translateX(-2%); 
+    }
+
+    .cadastro__imagem{
+        transform: translate(-20%);
+    }
+
+    .formulario__campo {
+        margin: 0.6em 0; /* Em telas menores, os campos terão uma margem somente no topo e na base */
+        overflow-x: none;
+    }
+
+    .campo__etiqueta{
+        width:100%;
+    }
+
+    .principal__titulo {
+        padding-top: 30px;
+    }
+
+    #cadastroFinalizado {
+        transform: translateY(-30px);
+    }
+
+    #pautaTitulos{
+        width: -100px;
+    }
+}
+
+
+/* Adicione uma Media Query para telas maiores */
+@media screen and (min-width: 768px) {
+    .principal {
+        width: 100%;
+        margin: 4em auto; 
+        transform: translateX(25%);
+    }
+
+    .principalSessaoAberta{
+        width: 100%;
+        margin: 4em auto; 
+        transform: translateX(5%);
+    }
+
+    .botao_lupa{
+        transform: translate(-40px);
+        height: 10px;
+        width: 20px;
+        right: 2px;
+        border: 1px solid transparent;
+        background: none;
+        cursor: pointer;
+        overflow: hidden;
+        transition: border-color 0.2s;
+    }
+}
+
+#dados{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #020101;
+    line-height: 1.5;
+    color: var(--laranja)
+}
+
+#informacoes{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+    color: var(--azul)
+}
+
+#borda, #bordaDescricao, #bordaTitulo{
+    border-left: 3px solid #00010365; /* Adicione uma borda à direita */
+    border-bottom: 3px solid #0001036e;
+    border-right: 1px solid #0001036e;
+    border-radius: 10px;
+    opacity: 0; /* Começa com opacidade 0 */
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 10px;
+
+}
+
+#cadastroFinalizado {
+    width: 50vw;
+    margin: 5em auto 5em auto;
+    position: relative;
+    transform: translate(5) translateY(120px);
+}
+
+.principal__titulo, #etapas {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    margin-top: -40px;
+    color: var(--laranja)
+}
+
+.principal__subtitulo {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    color: var(--azul);
+    margin: 3em 0 2em 0;
+}
+
+.titulos, #pautaTitulo, #nomeAssociado {
+    font-size: 20px;
+    color:  var(--azul);
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.descricao, #pautaDescricao, #pautaId, #id_associado, #numero_CPF, #NumeroPauta, #idSessao{
+    font-size: 18px;
+    color:  var(--laranja);
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+#idSessao{
+    margin-bottom: -20px;
+}
+
+#labelTitulo, #labelDescricao, #labelId, #labelNome, #labelCpf, #labelIdSessao{
+    color: black;
+    font-size: 13px;
+    margin-left: 5px;
+    
+}
+
+#labelDescricao, #labelCpf{
+margin-top: 15px;
+}
+
+#labelId{
+    margin-top: 30px;
+}
+
+#margin{
+    margin-top: 30px;
+}
+
+.campo__etiqueta {
+    display: block;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--azul);
+    margin-left: 1em;
+    margin-bottom: 10px;
+    width: 90vw;
+}
+
+.campo__escrita {
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    padding: 1em;
+    width: 90%;
+    max-width: 700px;
+}
+
+.campo__escritaPautas{
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    padding: 3em;
+    width: 80%;
+    max-width: 700px;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+.campo__escritaVoto{
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    padding: 1em;
+    width: 70%;
+    max-width: 700px;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+#erro, #erroVoto {
+    display: flex;
+    margin-top: 0.5em;
+    align-items: center;
+    color: var(--vermelho); /* Adicione esta linha para definir a cor vermelha */
+    margin-left: 15px;
+  }
+
+#erroVoto{
+    transform:translateX(-10px) translateY(-3px);
+}
+
+.formulario__campo {
+    margin: .6em 20em .6em 0;
+    width: 290px;
+    overflow-x:hidden;
+}
+
+.formulario__dupla {
+    display: flex;
+}
+
+.campo__entrada{
+    position: relative;
+}
+
+.botao_lupa{
+    transform: translate(-45px);
+    height: 20px;
+    width: 30px;
+    right: 3px;
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.botao_lupa:hover{
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.botao_lupa img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.formulario__erro {
+    display: flex;
+    margin-top: .5em;
+    align-items: center;
+}
+
+.erro__imagem {
+    width: 16px;
+    height: 16px;
+    margin: 0 .5em;
+    background-image: url('../img/warning.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.erro__texto {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--vermelho);
+}
+
+.mensagem {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.sucesso {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* CSS */
+#container {
+    display: flex;
+    transform: translateX(-5px);
+    padding-top: 5%;
+}
+
+#LdEsquerdo {
+    flex: 1; /* Isso fará com que a coluna esquerda ocupe todo o espaço disponível */
+    padding: 5px; /* Adicione margens ou padding conforme necessário */
+    align-items: center;
+    width: 50%;
+    height: 400px;
+    transform: translateX(-50px);
+    border-right: 1px solid #ccc; /* Adicione uma borda à direita */
+
+}
+
+#LdDireito {
+    flex: 1; /* Isso fará com que a coluna direita ocupe todo o espaço disponível */
+    padding: 5px; /* Adicione margens ou padding conforme necessário */
+    align-items: center;
+    width: 50%;
+    height: 400px;
+}
+
+/* Adicione uma media query para telas com largura máxima de 768px (ou o valor que preferir) */
+@media screen and (max-width: 768px) {
+    #container {
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        transform: none; /* Remove o deslocamento horizontal */
+        padding-top: 0; /* Remove o espaço superior */
+    }
+
+    #LdEsquerdo {
+        width: 100%; /* Largura total */
+        border-right: none; /* Remove a borda à direita */
+        transform: translateX(3px);
+    }
+
+    #LdDireito {
+        width: 100%; /* Largura total */
+    }
+}
+
