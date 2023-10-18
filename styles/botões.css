@@ -98,7 +98,7 @@
   --color-background: #EB9B00;
   --color-outline: #a5720b;
   --color-shadow: #00000080;
- margin-top: 10px;
+ transform: scale(0.8)translateX(-30px)translateY(-40px);
 }
 
 .btn-content {
